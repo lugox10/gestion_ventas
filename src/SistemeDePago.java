@@ -1,5 +1,6 @@
 public enum SistemeDePago {
 
     TARJETA_DE_CREDITO,
-    TRANSFERENCIA
+    TRANSFERENCIA,
+    PAGO_CONTRA_REEMBOLSO
 }

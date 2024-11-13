@@ -1,3 +1,7 @@
+import intefaces.TipoDePago;
+
+import java.util.List;
+
 public class Libros extends Productos {
 
     String Autor;
@@ -13,19 +17,17 @@ public class Libros extends Productos {
     }
 
     @Override
-    public void informacionProducto() {
-
-        pagar();
-        super.informacionProducto();
-        descuentoEspecial();
+    public String informacionProducto() {
         calcularPrecioVenta();
-
+        pagar();
+        descuentoEspecial();
+        return super.informacionProducto();
     }
 
     @Override
     public void calcularPrecioVenta() {
         double precioVenta = getPrecio() / getCantidadEnInventario();
-        System.out.println("El precio de venta de " + getNombre() + " es: " + precioVenta + " con " + SistemeDePago.TRANSFERENCIA );
+        System.out.println("El precio de venta del libro " + getNombre() + " es: " + precioVenta + " con " + SistemeDePago.TRANSFERENCIA );
     }
 
 

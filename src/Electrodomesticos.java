@@ -1,4 +1,6 @@
+import intefaces.TipoDePago;
 
+import java.util.List;
 
 public class Electrodomesticos extends Productos {
 
@@ -26,11 +28,11 @@ public class Electrodomesticos extends Productos {
     }
 
     @Override
-    public void informacionProducto() {
+    public String informacionProducto() {
         descuentoPorMarca();
-        pagar();
-        super.informacionProducto();
         calcularPrecioVenta();
+        pagar();
+        return super.informacionProducto();
 
     }
 

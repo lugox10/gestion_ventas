@@ -26,10 +26,11 @@ public  class Productos implements CategoriaProductos, MetodoDePago, CarritoDeCo
     }
 
 
-    public void informacionProducto(){
-        System.out.println("Nombre: " + nombre+ ", Precio: " + precio + ", Cantidad en inventario: " + cantidadEnInventario);
+    public String informacionProducto(){
 
+        return "Nombre: " + nombre + ", Precio: " + precio + ", Cantidad en inventario: " + cantidadEnInventario;
     }
+
 
     public void calcularPrecioVenta(){
         System.out.println("El precio de venta es: ");
